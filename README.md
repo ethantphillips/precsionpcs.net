@@ -108,3 +108,8 @@ Write your blog post here using **Markdown**!
 ### 📬 Questions or Support?
 
 Created by Ethan Phillips • [precisionpcs.net](https://precisionpcs.net)
+
+
+---
+
+⚠️ **Reminder**: Run `npm install` after cloning or extracting to install Astro and all dependencies.
