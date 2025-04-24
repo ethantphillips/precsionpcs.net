@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+const posts = await getCollection('blog');
+---
+
+<html lang="en">
+  <head>
+  <meta name="description" content="The official Precision PCs blog. Get news, tips, and insights on custom computers, consoles, and repair.">
+  <meta name="keywords" content="custom PCs, PC blog, gaming rigs, tech news, Precision PCs">
+  <meta name="author" content="Ethan Phillips">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5717141519109804"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <title>Precision PCs Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5717141519109804"
+     crossorigin="anonymous"></script>
+  </head>
+  <body style="font-family: sans-serif; max-width: 800px; margin: auto; padding: 1rem;">
+  <nav style="margin-bottom: 2rem;">
+    <a href="/">Home</a> |
+    <a href="/admin/">Admin</a>
+  </nav> style="font-family: sans-serif; max-width: 800px; margin: auto; padding: 1rem;">
+    <header>
+      <h1>Precision PCs Blog</h1>
+      <ins class="adsbygoogle"
+        style="display:block; text-align:center;"
+        data-ad-client="ca-pub-5717141519109804"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    </header>
+    <main>
+      <ul>
+        {posts.map(post => (
+          <li>
+            <a href={`/blog/${post.slug}/`}><strong>{post.data.title}</strong></a>
+            <p>{post.data.description}</p>
+          </li>
+        ))}
+      </ul>
+    </main>
+    <footer style="margin-top: 2rem; text-align: center; font-size: 0.85rem;">
+      <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-5717141519109804"
+        data-ad-slot="1234567891"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    </footer>
+  </body>
+</html>
